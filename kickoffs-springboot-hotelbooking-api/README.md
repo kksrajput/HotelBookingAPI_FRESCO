@@ -5,6 +5,7 @@
 # Getting started
 
 # /room/add
+http://localhost:8080/room/add
 Method - POST
 Create and adds a hotel. Assume that the request body is always valid.
 JSON Body-
@@ -19,8 +20,10 @@ JSON Body-
 
 
 # /rooms/get
+http://localhost:8080/rooms/get/1
 return all room objects in the room Table.
 /rooms/get? hotelId= {hotel Id}
+http://localhost:8080/rooms/get?hotelId=1
 return all room objects of a particular hotel with given hotel Id.
 Method - GET
 
@@ -39,10 +42,12 @@ Method - GET
 
 # /rooms/book/{roomid}
 Method - PUT
+http://localhost:8080/rooms/book/1
 Change the occupied filed of the particular room with given roomId to true/false.
 
 # /rooms/delete/{roomid}
 Method - DELETE
+
 Delete the room row with given room id from the table only if the occupied field of that particular room is false. Assume that the path variable is always found.
 200 Ok
 400 bad request
